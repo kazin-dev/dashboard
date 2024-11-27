@@ -4,17 +4,17 @@ import EclipseProfile from '../../Images/Ellipse 2.png'
 import Vector from '../../Images/Vector (3).png'
 import {
   Grid,
-  HeaderContainer,
   NotificationIcon,
   PngVector,
   Profile,
   RightContent,
+  SecondContainer,
   StyledInput
 } from './styles'
 
 const Header = () => {
   return (
-    <HeaderContainer>
+    <SecondContainer>
       <Grid>
         <StyledInput>
           <img src={Search} alt="" />
@@ -30,7 +30,7 @@ const Header = () => {
           </Profile>
         </RightContent>
       </Grid>
-    </HeaderContainer>
+    </SecondContainer>
   )
 }
 

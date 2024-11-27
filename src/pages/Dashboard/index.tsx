@@ -1,11 +1,17 @@
 import Header from '../../components/Header'
-import { Container } from '../../styles'
+import Welcome from '../../components/MainContent/WelcomeSection'
+import Sidebar from '../../components/Sidebar'
+import { Container, MainContent } from '../../styles'
 
 const Dashboard = () => {
   return (
     <>
       <Container>
-        <Header />
+        <Sidebar />
+        <MainContent>
+          <Header />
+          <Welcome />
+        </MainContent>
       </Container>
     </>
   )
