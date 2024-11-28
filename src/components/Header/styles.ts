@@ -52,6 +52,7 @@ export const Grid = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 50%;
+  height: 80px;
 `
 export const PngVector = styled.img`
   margin-left: 10px;

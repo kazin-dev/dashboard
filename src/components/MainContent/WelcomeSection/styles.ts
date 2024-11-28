@@ -16,7 +16,7 @@ export const Grid = styled.div`
 export const Button = styled.button`
   padding: 8px;
   background-color: ${colors.Black};
-  color: ${colors.white};
+  color: ${colors.White};
   border: none;
   border-radius: 4px;
   margin-right: 16px;

@@ -1,9 +1,10 @@
 import styled, { createGlobalStyle } from 'styled-components'
 
 export const colors = {
-  white: '#fff',
-  Silver: '#bfbfbf',
-  Black: '#000'
+  White: '#fff',
+  Silver: '#848484',
+  Black: '#000',
+  LightGray: '#F5F5F5'
 }
 
 export const GlobalStyle = createGlobalStyle`
@@ -26,4 +27,7 @@ export const MainContent = styled.main`
   flex: 1; /* Ocupa todo o espaço restante ao lado da Sidebar */
   display: flex;
   flex-direction: column;
+`
+export const ContainerBackground = styled.div`
+  background-color: ${colors.LightGray};
 `
