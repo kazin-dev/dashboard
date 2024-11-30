@@ -1,9 +1,13 @@
+/* eslint-disable prettier/prettier */
 import { SecondContainer } from '../../Header/styles'
 import {
+  CardInfo,
   CardTotal,
   CardWallet,
   ContainerTotal,
+  GridHeaderWallet,
   GridWallet,
+  SpanLine,
   Switch,
   TitleTotal,
   Value
@@ -57,17 +61,23 @@ const WalletSection: React.FC<ToggleSwitchProps> = ({
       </div>
       <CardWallet>
         <div>
-          <div>
-            <h3>Wallet</h3>
-            <p>
-              Cards | <span>1 out of 4</span>
-            </p>
-          </div>
-          <GridWallet>
+          <GridHeaderWallet>
             <div>
-              <img src={Card} alt="" />
+              <h3>Wallet</h3>
+              <TitleTotal>
+                Cards | 1 out of 4
+              </TitleTotal>
             </div>
             <div>
+              <span>back - next</span>
+            </div>
+          </GridHeaderWallet>
+          <GridWallet>
+            <img src={Card} alt="" />
+
+            <SpanLine />
+
+            <CardInfo>
               <div>
                 <p>Balance</p>
                 <span>$14,528,00</span>
@@ -87,7 +97,7 @@ const WalletSection: React.FC<ToggleSwitchProps> = ({
                   <span className="slider"></span>
                 </Switch>
               </div>
-            </div>
+            </CardInfo>
           </GridWallet>
         </div>
       </CardWallet>
