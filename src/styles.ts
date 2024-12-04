@@ -18,7 +18,7 @@ export const GlobalStyle = createGlobalStyle`
 
 export const Container = styled.div`
   display: flex;
-  height: 100vh; /* Garante que a altura seja igual à da tela inteira */
+  height: 150vh; /* Garante que a altura seja igual à da tela inteira */
   width: 100vw;
   overflow: hidden; /* Evita que elementos escapem */
 `
@@ -27,7 +27,10 @@ export const MainContent = styled.main`
   flex: 1; /* Ocupa todo o espaço restante ao lado da Sidebar */
   display: flex;
   flex-direction: column;
-`
-export const ContainerBackground = styled.div`
   background-color: ${colors.LightGray};
+`
+export const GridPage = styled.div`
+  display: grid;
+  grid-templates-column: 1fr 1fr;
+  gap: 20px;
 `

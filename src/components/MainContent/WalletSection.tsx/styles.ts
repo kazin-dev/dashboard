@@ -88,7 +88,7 @@ export const Switch = styled.label`
 export const GridHeaderWallet = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 25%;
+  gap: 23%;
   margin-bottom: 10px;
   width: 1100px;
 
@@ -112,5 +112,6 @@ export const CardInfo = styled.div`
     line-height: auto;
     color: ${colors.Silver};
     margin-bottom: 8px;
+    margin-top: 10px;
   }
 `

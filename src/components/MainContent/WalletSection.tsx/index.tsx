@@ -14,6 +14,7 @@ import {
 } from './styles'
 
 import Card from '../../../Images/Card.png'
+import StatisticsChart from '../Statistcs'
 
 type ToggleSwitchProps = {
   isChecked: boolean
@@ -80,11 +81,11 @@ const WalletSection: React.FC<ToggleSwitchProps> = ({
             <CardInfo>
               <div>
                 <p>Balance</p>
-                <span>$14,528,00</span>
+                <span><b>$14,528,00</b></span>
               </div>
               <div>
                 <p>Currency</p>
-                <span>US Dollar</span>
+                <span><b>US Dollar</b></span>
               </div>
               <div>
                 <p>Deactivate card</p>
@@ -101,6 +102,7 @@ const WalletSection: React.FC<ToggleSwitchProps> = ({
           </GridWallet>
         </div>
       </CardWallet>
+      <StatisticsChart />
     </SecondContainer>
   )
 }

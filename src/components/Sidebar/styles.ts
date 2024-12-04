@@ -8,7 +8,7 @@ export const SidebarContainer = styled.aside`
   flex-direction: column;
   justify-content: space-between;
   padding: 20px 10px;
-  height: 100vh;
+  height: height: 100%;
 `
 
 export const Logo = styled.div`

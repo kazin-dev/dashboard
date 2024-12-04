@@ -3,7 +3,7 @@ import Header from '../../components/Header'
 import WalletSection from '../../components/MainContent/WalletSection.tsx'
 import Welcome from '../../components/MainContent/WelcomeSection'
 import Sidebar from '../../components/Sidebar'
-import { Container, ContainerBackground, MainContent } from '../../styles'
+import { Container, GridPage, MainContent } from '../../styles'
 
 const Dashboard = () => {
   const [isChecked, setIsChecked] = useState(false)
@@ -14,10 +14,12 @@ const Dashboard = () => {
         <Sidebar />
         <MainContent>
           <Header />
-          <ContainerBackground>
-            <Welcome />
-            <WalletSection isChecked={isChecked} onToggle={setIsChecked} />
-          </ContainerBackground>
+          <GridPage>
+            <div>
+              <Welcome />
+              <WalletSection isChecked={isChecked} onToggle={setIsChecked} />
+            </div>
+          </GridPage>
         </MainContent>
       </Container>
     </>
