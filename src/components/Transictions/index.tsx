@@ -6,7 +6,7 @@ const Transiction = () => {
       </div>
       <div>
         <ul>
-          <li></li>
+          <li>teste</li>
         </ul>
       </div>
     </div>
