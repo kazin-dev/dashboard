@@ -23,7 +23,7 @@ export const TitleTotal = styled.div`
 export const Value = styled.span`
   font-size: 16px;
   margin: 4px 0;
-  display: block; /* Garante que o elemento ocupe toda a largura */
+  display: block;
 `
 
 export const CardWallet = styled.div`

@@ -4,7 +4,8 @@ export const colors = {
   White: '#fff',
   Silver: '#848484',
   Black: '#000',
-  LightGray: '#F5F5F5'
+  LightGray: '#F5F5F5',
+  Red: '#D70000'
 }
 
 export const GlobalStyle = createGlobalStyle`
@@ -31,6 +32,6 @@ export const MainContent = styled.main`
 `
 export const GridPage = styled.div`
   display: grid;
-  grid-templates-column: 1fr 1fr;
-  gap: 20px;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
 `
