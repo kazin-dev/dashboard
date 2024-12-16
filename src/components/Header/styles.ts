@@ -2,7 +2,7 @@ import { styled } from 'styled-components'
 import { colors } from '../../styles'
 
 export const SecondContainer = styled.div`
-  max-width: 900px;
+  max-width: 1116px;
   width: 100%;
   margin: 0 auto;
 `

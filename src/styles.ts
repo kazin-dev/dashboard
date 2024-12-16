@@ -20,7 +20,7 @@ export const GlobalStyle = createGlobalStyle`
 export const Container = styled.div`
   display: flex;
   height: 150vh; /* Garante que a altura seja igual à da tela inteira */
-  width: 100vw;
+  width: 100%;
   overflow: hidden; /* Evita que elementos escapem */
 `
 

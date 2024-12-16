@@ -1,12 +1,13 @@
 import styled from 'styled-components'
+import { colors } from '../../styles'
 
 export const SidebarContainer = styled.aside`
-  width: 250px;
-  background-color: #1f1f2e;
+  width: 281px;
+  background-color: ${colors.Black};
   color: #fff;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-center;
   padding: 20px 10px;
   height: height: 100%;
 `
@@ -14,8 +15,6 @@ export const SidebarContainer = styled.aside`
 export const Logo = styled.div`
   display: flex;
   align-items: center;
-  margin-bottom: 20px;
-
   img {
     width: 40px;
     height: 40px;
@@ -31,7 +30,8 @@ export const Logo = styled.div`
 export const Menu = styled.nav`
   ul {
     list-style: none;
-    padding: 0;
+    padding: 0%;
+    height: 508px;
 
     .menu-item {
       display: flex;
@@ -41,13 +41,10 @@ export const Menu = styled.nav`
       cursor: pointer;
       border-radius: 5px;
       transition: background-color 0.3s;
-
-      &:hover {
-        background-color: #2c2c3a;
-      }
+      height: 59px;
 
       &.active {
-        background-color: #2c2c3a;
+        background-color: ${colors.Black};
         font-weight: bold;
       }
 
@@ -94,3 +91,4 @@ export const SidebarFooter = styled.div`
     }
   }
 `
+export const UserProfile = styled.div``

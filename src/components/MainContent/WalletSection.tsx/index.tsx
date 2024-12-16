@@ -65,9 +65,7 @@ const WalletSection: React.FC<ToggleSwitchProps> = ({
           <GridHeaderWallet>
             <div>
               <h3>Wallet</h3>
-              <TitleTotal>
-                Cards | 1 out of 4
-              </TitleTotal>
+              <TitleTotal>Cards | 1 out of 4</TitleTotal>
             </div>
             <div>
               <span>back - next</span>
@@ -81,11 +79,15 @@ const WalletSection: React.FC<ToggleSwitchProps> = ({
             <CardInfo>
               <div>
                 <p>Balance</p>
-                <span><b>$14,528,00</b></span>
+                <span>
+                  <b>$14,528,00</b>
+                </span>
               </div>
               <div>
                 <p>Currency</p>
-                <span><b>US Dollar</b></span>
+                <span>
+                  <b>US Dollar</b>
+                </span>
               </div>
               <div>
                 <p>Deactivate card</p>

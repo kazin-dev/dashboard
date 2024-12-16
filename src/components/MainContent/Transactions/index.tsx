@@ -1,15 +1,17 @@
 import ItemTransactions from '../../ItemsTransactions'
-import { CardTransactions, TopBar } from './styled'
+import { CardTransactions, TopBar, TopBarText } from './styled'
 
 const Transiction = () => {
   return (
     <CardTransactions>
       <TopBar>
-        <div>
+        <TopBarText>
           <h3>Transictions</h3>
-        </div>
+          <p>|</p>
+          <p>Upcoming Bills</p>
+        </TopBarText>
         <div>
-          <a href="#">view</a>
+          <a href="#">view all</a>
         </div>
       </TopBar>
       <div>

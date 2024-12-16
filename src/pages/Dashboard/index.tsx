@@ -5,6 +5,7 @@ import Welcome from '../../components/MainContent/WelcomeSection'
 import Sidebar from '../../components/Sidebar'
 import { Container, GridPage, MainContent } from '../../styles'
 import Transiction from '../../components/MainContent/Transactions'
+import { SecondContainer } from '../../components/Header/styles'
 
 const Dashboard = () => {
   const [isChecked, setIsChecked] = useState(false)
@@ -16,14 +17,16 @@ const Dashboard = () => {
         <MainContent>
           <Header />
           <Welcome />
-          <GridPage>
-            <div>
-              <WalletSection isChecked={isChecked} onToggle={setIsChecked} />
-            </div>
-            <div>
-              <Transiction />
-            </div>
-          </GridPage>
+          <SecondContainer>
+            <GridPage>
+              <div>
+                <WalletSection isChecked={isChecked} onToggle={setIsChecked} />
+              </div>
+              <div>
+                <Transiction />
+              </div>
+            </GridPage>
+          </SecondContainer>
         </MainContent>
       </Container>
     </>

@@ -1,10 +1,17 @@
 import React from 'react'
-import { Logo, Menu, SidebarContainer, SidebarFooter } from './styles'
+import {
+  Logo,
+  Menu,
+  SidebarContainer,
+  SidebarFooter,
+  UserProfile
+} from './styles'
+import Symbol from '../../Images/Symbol.png'
 
 const Sidebar = () => (
   <SidebarContainer className="sidebar">
     <Logo className="logo">
-      <img src="/path/to/logo.png" alt="InvestBank Logo" />
+      <img src={Symbol} alt="InvestBank Logo" />
       <h1>InvestBank</h1>
     </Logo>
     <Menu className="menu">
@@ -28,21 +35,22 @@ const Sidebar = () => (
           <span>📈</span> Securities
         </li>
       </ul>
-    </Menu>
-    <SidebarFooter className="sidebar-footer">
       <div className="help">
         <span>❓</span> Help
       </div>
       <div className="settings">
         <span>⚙️</span> Settings
       </div>
-      <div className="user-profile">
+    </Menu>
+
+    <SidebarFooter className="sidebar-footer">
+      <UserProfile>
         <img src="/path/to/user-avatar.jpg" alt="User Avatar" />
         <div className="user-info">
           <h4>Anna Karin</h4>
           <p>annakarin@gmail.com</p>
         </div>
-      </div>
+      </UserProfile>
     </SidebarFooter>
   </SidebarContainer>
 )
