@@ -6,6 +6,7 @@ import Sidebar from '../../components/Sidebar'
 import { Container, GridPage, MainContent } from '../../styles'
 import Transiction from '../../components/MainContent/Transactions'
 import { SecondContainer } from '../../components/Header/styles'
+import QuickTransfer from '../../components/MainContent/QuickTransfer'
 
 const Dashboard = () => {
   const [isChecked, setIsChecked] = useState(false)
@@ -24,6 +25,7 @@ const Dashboard = () => {
               </div>
               <div>
                 <Transiction />
+                <QuickTransfer />
               </div>
             </GridPage>
           </SecondContainer>
