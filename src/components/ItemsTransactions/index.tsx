@@ -11,53 +11,43 @@ import {
   Value
 } from './styles'
 
+const transactions = [
+  {
+    name: 'Netflix',
+    date: 'Apr 05 2023 at 21:46',
+    value: '-$15.49',
+    img: Netflix
+  },
+  {
+    name: 'Spotify',
+    date: 'Apr 05 2023 at 21:46',
+    value: '+$135.49',
+    img: Spotify
+  },
+  { name: 'Figma', date: 'Apr 05 2023 at 21:46', value: '-$75.00', img: Figma },
+  {
+    name: 'Shopify',
+    date: 'Apr 05 2023 at 21:46',
+    value: '-$75.00',
+    img: Shopify
+  }
+]
+
 const ItemTransactions = () => {
   return (
     <>
-      <ModelTransactions>
-        <img src={Netflix} alt="" />
-        <BodyModelTransactions>
-          <div>
-            <Name>Netflix</Name>
-            <Date>Apr 05 2023 at 21:46</Date>
-          </div>
-          <Value>-$15.49</Value>
-        </BodyModelTransactions>
-      </ModelTransactions>
-      <ModelTransactions>
-        <img src={Spotify} alt="" />
-        <BodyModelTransactions>
-          <div>
-            <Name>Spotify</Name>
-            <Date>Apr 05 2023 at 21:46</Date>
-          </div>
-          <Value>+$135.49</Value>
-        </BodyModelTransactions>
-      </ModelTransactions>
-      <ModelTransactions>
-        <img src={Figma} alt="" />
-        <BodyModelTransactions>
-          <div>
-            <Name>Figma</Name>
-            <Date>Apr 05 2023 at 21:46</Date>
-          </div>
-          <div>
-            <Value>-$75.00</Value>
-          </div>
-        </BodyModelTransactions>
-      </ModelTransactions>
-      <ModelTransactions>
-        <img src={Shopify} alt="" />
-        <BodyModelTransactions>
-          <div>
-            <Name>Shopify</Name>
-            <Date>Apr 05 2023 at 21:46</Date>
-          </div>
-          <div>
-            <Value>-$75.00</Value>
-          </div>
-        </BodyModelTransactions>
-      </ModelTransactions>
+      {transactions.map((transaction, index) => (
+        <ModelTransactions key={index}>
+          <img src={transaction.img} alt={transaction.name} />
+          <BodyModelTransactions>
+            <div>
+              <Name>{transaction.name}</Name>
+              <Date>{transaction.date}</Date>
+            </div>
+            <Value>{transaction.value}</Value>
+          </BodyModelTransactions>
+        </ModelTransactions>
+      ))}
     </>
   )
 }

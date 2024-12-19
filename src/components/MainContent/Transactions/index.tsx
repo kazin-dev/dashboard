@@ -6,7 +6,7 @@ const Transiction = () => {
     <CardTransactions>
       <TopBar>
         <TopBarText>
-          <h3>Transictions</h3>
+          <h3>Transactions</h3>
           <p>|</p>
           <p>Upcoming Bills</p>
         </TopBarText>

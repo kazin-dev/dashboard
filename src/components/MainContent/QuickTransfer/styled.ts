@@ -8,8 +8,9 @@ export const Card = styled.div`
   margin-top: 14px;
   list-style: none;
   border-radius: 12px;
-  position: relative; /* Para posicionar as setas */
+  position: relative;
   padding: 16px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 `
 
 export const TopBar = styled.div`
@@ -22,9 +23,8 @@ export const TopBar = styled.div`
   }
 
   a {
-    color: ${colors};
-    text-decoration: none;
-    font-size: 14px;
+    color: ${colors.Silver};
+    font-size: 12px;
   }
 `
 
@@ -52,6 +52,27 @@ export const CardItem = styled.div`
   font-size: 14px;
   font-weight: bold;
   color: ${colors};
+
+  div {
+    display: flex;
+    flex-direction: column;
+    padding: 4px;
+
+    p:first-child {
+      color: ${colors.Silver};
+      font-size: 14px;
+      line-height: auto;
+      font-weight: 400;
+      margin: 0 0 10px 8px;
+    }
+
+    p {
+      color: ${colors.Black};
+      font-size: 14px;
+      line-height: auto;
+      margin-left: 8px;
+    }
+  }
 `
 
 export const ArrowButton = styled.button`
@@ -119,11 +140,6 @@ export const Input = styled.input`
   border: none;
   border-radius: 8px;
   outline: none;
-
-  &:focus {
-    border-color: ${colors};
-    box-shadow: 0 0 5px ${colors};
-  }
 `
 export const StartArea = styled.div`
   display: flex;

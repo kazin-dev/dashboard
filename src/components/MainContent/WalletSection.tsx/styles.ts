@@ -9,6 +9,7 @@ export const CardTotal = styled.div`
   background-color: ${colors.White};
   padding: 20px;
   border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 `
 export const ContainerTotal = styled.div`
   display: flex;
@@ -33,6 +34,7 @@ export const CardWallet = styled.div`
   margin-top: 12px;
   border-radius: 12px;
   padding: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 `
 export const GridWallet = styled.div`
   display: grid;

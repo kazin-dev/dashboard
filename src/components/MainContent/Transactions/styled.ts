@@ -7,6 +7,9 @@ export const CardTransactions = styled.div`
   background-color: ${colors.White};
   margin-top: 36px;
   list-style: none;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
   ul {
     list-style: none;
@@ -16,8 +19,7 @@ export const TopBar = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 8px;
-  padding: 8px;
+  margin-bottom: 16px;
 
   p {
     font-size: 12px;
@@ -26,7 +28,7 @@ export const TopBar = styled.div`
 
   a {
     color: ${colors.Silver};
-    margin-right: 40px;
+    margin-right: 30px;
     font-size: 12px;
   }
 `

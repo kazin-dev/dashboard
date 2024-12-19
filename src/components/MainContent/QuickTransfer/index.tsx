@@ -2,6 +2,8 @@ import CardIcon from '../../../Images/fluent_payment-32-regular.png'
 import DollarCircle from '../../../Images/dollarcircle.png'
 import Porcent from '../../../Images/porc.png'
 import Arrow from '../../../Images/solar_arrow-right-linear.png'
+import CardOne from '../../../Images/card (1).png'
+import CardTwo from '../../../Images/card2.png'
 
 import {
   BodyCard,
@@ -49,11 +51,21 @@ const QuickTransfer = () => {
 
         {/* Container Rolável */}
         <Cards ref={scrollRef}>
-          <CardItem>Card 1</CardItem>
-          <CardItem>Card 2</CardItem>
+          <CardItem>
+            <img src={CardOne} alt="" />
+            <div>
+              <p>3149 Debit card</p>
+              <p>2895.15 USD</p>
+            </div>
+          </CardItem>
+          <CardItem>
+            <img src={CardTwo} alt="" />
+            <div>
+              <p>3149 Debit card</p>
+              <p>2895.15 USD</p>
+            </div>
+          </CardItem>
           <CardItem>Card 3</CardItem>
-          <CardItem>Card 4</CardItem>
-          <CardItem>Card 5</CardItem>
         </Cards>
 
         <CardArea>
