@@ -7,6 +7,15 @@ import {
   UserProfile
 } from './styles'
 import Symbol from '../../Images/Symbol.png'
+import Analitycs from '../../Images/Analitycs.png'
+import DashboardIcon from '../../Images/Dashboard Icon.png'
+import Payment from '../../Images/fluent_payment-32-regular.png'
+import Deposit from '../../Images/carbon_percentage.png'
+import BoxMoney from '../../Images/ph_piggy-bank.png'
+import Securities from '../../Images/arcticons_eufy-security.png'
+import Help from '../../Images/Vector-1.png'
+import Settings from '../../Images/setting2.png'
+import Profile from '../../Images/Ellipse 2.png'
 
 const Sidebar = () => (
   <SidebarContainer className="sidebar">
@@ -17,35 +26,59 @@ const Sidebar = () => (
     <Menu className="menu">
       <ul>
         <li className="menu-item active">
-          <span>🏠</span> Dashboard
+          <span>
+            <img src={DashboardIcon} alt="" />
+          </span>{' '}
+          Dashboard
         </li>
         <li className="menu-item">
-          <span>📊</span> Analytics
+          <span>
+            <img src={Analitycs} alt="" />
+          </span>{' '}
+          Analytics
         </li>
         <li className="menu-item">
-          <span>💳</span> Payments
+          <span>
+            <img src={Payment} alt="" />
+          </span>{' '}
+          Payments
         </li>
         <li className="menu-item">
-          <span>📥</span> Deposit
+          <span>
+            <img src={Deposit} alt="" />
+          </span>{' '}
+          Deposit
         </li>
         <li className="menu-item">
-          <span>💼</span> Moneybox
+          <span>
+            <img src={BoxMoney} alt="" />
+          </span>{' '}
+          Moneybox
         </li>
         <li className="menu-item">
-          <span>📈</span> Securities
+          <span>
+            <img src={Securities} alt="" />
+          </span>{' '}
+          Securities
         </li>
       </ul>
       <div className="help">
-        <span>❓</span> Help
+        <span>
+          <img src={Help} alt="" />
+        </span>{' '}
+        Help
       </div>
       <div className="settings">
-        <span>⚙️</span> Settings
+        <span>
+          <img src={Settings} alt="" />
+        </span>{' '}
+        Settings
       </div>
     </Menu>
 
     <SidebarFooter className="sidebar-footer">
       <UserProfile>
-        <img src="/path/to/user-avatar.jpg" alt="User Avatar" />
+        <img src={Profile} alt="User Avatar" />
         <div className="user-info">
           <h4>Anna Karin</h4>
           <p>annakarin@gmail.com</p>

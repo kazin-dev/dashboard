@@ -15,6 +15,9 @@ export const SidebarContainer = styled.aside`
 export const Logo = styled.div`
   display: flex;
   align-items: center;
+  padding: 0 10px 10px 10px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid ${colors.SoftSilver};
   img {
     width: 40px;
     height: 40px;
@@ -44,7 +47,6 @@ export const Menu = styled.nav`
       height: 59px;
 
       &.active {
-        background-color: ${colors.Black};
         font-weight: bold;
       }
 
@@ -91,4 +93,6 @@ export const SidebarFooter = styled.div`
     }
   }
 `
-export const UserProfile = styled.div``
+export const UserProfile = styled.div`
+  display: flex;
+`
