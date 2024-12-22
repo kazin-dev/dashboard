@@ -14,10 +14,16 @@ export const StyledInput = styled.div`
 
   input {
     flex: 1;
-    padding: 10px 10px 10px 30px;
+    padding: 10px 10px 10px 10px;
     border: 1px solid ${colors.Silver};
     border-radius: 8px;
-    width: 100%;
+    width: 288px;
+  }
+
+  input::placeholder {
+    color: gray;
+    font-size: 14px;
+    padding-left: 30px;
   }
 
   img {
@@ -51,7 +57,7 @@ export const Profile = styled.div`
 export const Grid = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 50%;
+  gap: 56.4%;
   height: 80px;
 `
 export const PngVector = styled.img`

@@ -6,7 +6,8 @@ export const colors = {
   SoftSilver: '#747475',
   Black: '#000',
   LightGray: '#F5F5F5',
-  Red: '#D70000'
+  Red: '#D70000',
+  Green: '#28a745'
 }
 
 export const GlobalStyle = createGlobalStyle`
@@ -20,9 +21,10 @@ export const GlobalStyle = createGlobalStyle`
 
 export const Container = styled.div`
   display: flex;
-  height: 150vh; /* Garante que a altura seja igual à da tela inteira */
+  height: 102vh; /* Garante que a altura seja igual à da tela inteira */
   width: 100%;
   overflow: hidden; /* Evita que elementos escapem */
+  overflow-y: hidden;
 `
 
 export const MainContent = styled.main`
@@ -30,9 +32,11 @@ export const MainContent = styled.main`
   display: flex;
   flex-direction: column;
   background-color: ${colors.LightGray};
+  max-width: 1800px;
+  width: 100%;
 `
 export const GridPage = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 18px;
+  gap: 28px;
 `

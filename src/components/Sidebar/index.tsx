@@ -62,17 +62,19 @@ const Sidebar = () => (
           Securities
         </li>
       </ul>
-      <div className="help">
-        <span>
-          <img src={Help} alt="" />
-        </span>{' '}
-        Help
-      </div>
-      <div className="settings">
-        <span>
-          <img src={Settings} alt="" />
-        </span>{' '}
-        Settings
+      <div className="help-settings">
+        <div className="help">
+          <span>
+            <img src={Help} alt="" />
+          </span>{' '}
+          Help
+        </div>
+        <div className="settings">
+          <span>
+            <img src={Settings} alt="" />
+          </span>{' '}
+          Settings
+        </div>
       </div>
     </Menu>
 

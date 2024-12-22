@@ -31,15 +31,20 @@ export const Logo = styled.div`
 `
 
 export const Menu = styled.nav`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+
   ul {
     list-style: none;
-    padding: 0%;
-    height: 508px;
+    padding: 0;
+    margin: 0;
 
     .menu-item {
       display: flex;
       align-items: center;
-      padding: 10px;
+      padding: 28px;
       font-size: 1rem;
       cursor: pointer;
       border-radius: 5px;
@@ -55,23 +60,49 @@ export const Menu = styled.nav`
       }
     }
   }
+
+  .help-settings {
+    border-top: 1px solid ${colors.SoftSilver};
+    padding-top: 10px;
+    .settings {
+      margin-bottom: 100%;
+    }
+
+    .help,
+    .settings {
+      display: flex;
+      align-items: center;
+      padding: 10px 29px;
+      font-size: 1rem;
+      font-size: 1rem;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+
+      span {
+        margin-right: 10px;
+      }
+    }
+  }
+`
+export const UserProfile = styled.div`
+  display: flex;
+  padding: 10px;
+
+  img {
+    margin-right: 10px;
+  }
 `
 
 export const SidebarFooter = styled.div`
-  .help,
-  .settings,
+  margin-top: auto;
+  padding-top: 20px;
+  border-top: 1px solid ${colors.SoftSilver};
+
   .user-profile {
-    margin-bottom: 15px;
     display: flex;
     align-items: center;
-    cursor: pointer;
 
-    &:hover {
-      opacity: 0.8;
-    }
-  }
-
-  .user-profile {
     img {
       width: 40px;
       height: 40px;
@@ -92,7 +123,4 @@ export const SidebarFooter = styled.div`
       }
     }
   }
-`
-export const UserProfile = styled.div`
-  display: flex;
 `

@@ -2,6 +2,7 @@ import Netflix from '../../Images/Picture.png'
 import Spotify from '../../Images/Picture-1.png'
 import Figma from '../../Images/Picture-2.png'
 import Shopify from '../../Images/Picture-3.png'
+import { TransactionImage } from './styles'
 
 import {
   BodyModelTransactions,
@@ -33,18 +34,20 @@ const transactions = [
   }
 ]
 
-const ItemTransactions = () => {
+const ItemTransactions = (): JSX.Element => {
   return (
     <>
       {transactions.map((transaction, index) => (
         <ModelTransactions key={index}>
-          <img src={transaction.img} alt={transaction.name} />
+          <TransactionImage src={transaction.img} alt={transaction.name} />
           <BodyModelTransactions>
             <div>
               <Name>{transaction.name}</Name>
               <Date>{transaction.date}</Date>
             </div>
-            <Value>{transaction.value}</Value>
+            <Value isPositive={transaction.value.startsWith('+')}>
+              {transaction.value}
+            </Value>
           </BodyModelTransactions>
         </ModelTransactions>
       ))}
