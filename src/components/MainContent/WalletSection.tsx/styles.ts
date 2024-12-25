@@ -35,6 +35,9 @@ export const CardWallet = styled.div`
   border-radius: 12px;
   padding: 12px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  @media (min-width: 768px) {
+    max-width: none; /* Permite crescer em telas maiores */
+  }
 `
 export const GridWallet = styled.div`
   display: grid;
@@ -42,6 +45,9 @@ export const GridWallet = styled.div`
   gap: 8px;
   max-width: 400px;
   width: 100%;
+  @media (min-width: 768px) {
+    max-width: none; /* Permite crescer em telas maiores */
+  }
 `
 export const Switch = styled.label`
   position: relative;

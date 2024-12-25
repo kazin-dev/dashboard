@@ -12,6 +12,10 @@ export const Grid = styled.div`
   p {
     color: ${colors.Silver};
   }
+
+  @media (min-width: 768px) {
+    max-width: none; /* Permite crescer em telas maiores */
+  }
 `
 export const Button = styled.button`
   padding: 8px;

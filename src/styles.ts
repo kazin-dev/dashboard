@@ -21,22 +21,67 @@ export const GlobalStyle = createGlobalStyle`
 
 export const Container = styled.div`
   display: flex;
-  height: 102vh; /* Garante que a altura seja igual à da tela inteira */
+  flex-direction: column;
+  height: 100vh; /* Garante que a altura seja 100% da viewport */
   width: 100%;
-  overflow: hidden; /* Evita que elementos escapem */
-  overflow-y: hidden;
+  overflow: hidden;
+
+  @media (min-width: 768px) {
+    flex-direction: row; /* Sidebar ao lado para telas maiores */
+  }
+`
+
+export const SidebarWrapper = styled.div`
+  width: 100%;
+  height: auto; /* Ajusta a altura dinamicamente */
+  @media (min-width: 768px) {
+    width: 25%; /* Define uma largura fixa para telas maiores */
+    height: 100%; /* Preenche a altura total da tela */
+  }
 `
 
 export const MainContent = styled.main`
-  flex: 1; /* Ocupa todo o espaço restante ao lado da Sidebar */
+  flex: 1;
   display: flex;
   flex-direction: column;
   background-color: ${colors.LightGray};
-  max-width: 1800px;
+  max-width: 100%;
   width: 100%;
+  height: auto; /* Ajusta a altura dinamicamente */
+  padding: 16px;
+
+  @media (min-width: 1024px) {
+    max-width: 1800px;
+    height: 100%; /* Garante que preencha toda a altura em telas grandes */
+    padding: 32px;
+  }
 `
+
 export const GridPage = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 28px;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  height: auto; /* Ajusta a altura do grid conforme necessário */
+
+  @media (min-width: 768px) {
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+  }
+
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(
+      3,
+      1fr
+    ); /* Adiciona mais colunas em telas maiores */
+  }
+`
+
+export const SecondContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  height: auto; /* Ajusta a altura dinamicamente */
+  @media (min-width: 768px) {
+    flex-direction: row;
+    height: 100%; /* Garante altura total em telas maiores */
+  }
 `
