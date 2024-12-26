@@ -1,6 +1,8 @@
 /* eslint-disable prettier/prettier */
 import { SecondContainer } from '../../Header/styles'
 import {
+  ButtonClickPassLeft,
+  ButtonClickPassRight,
   CardInfo,
   CardTotal,
   CardWallet,
@@ -15,6 +17,8 @@ import {
 
 import Card from '../../../Images/Card.png'
 import StatisticsChart from '../Statistcs'
+import Left from '../../../Images/Left.png'
+import Right from '../../../Images/Right.png'
 
 type ToggleSwitchProps = {
   isChecked: boolean
@@ -42,7 +46,9 @@ const WalletSection: React.FC<ToggleSwitchProps> = ({
           </CardTotal>
           <CardTotal>
             <TitleTotal>Total Expence</TitleTotal>
-            <Value>$425,30</Value>
+            <Value>
+              <b>$425,30</b>
+            </Value>
             <span>
               <TitleTotal>
                 from last week <span>7.85%</span>
@@ -51,7 +57,9 @@ const WalletSection: React.FC<ToggleSwitchProps> = ({
           </CardTotal>
           <CardTotal>
             <TitleTotal>Total Savings</TitleTotal>
-            <span>$549,61</span>
+            <Value>
+              <b>$549,61</b>
+            </Value>
             <span>
               <TitleTotal>
                 from last week <span>7.85%</span>
@@ -68,14 +76,20 @@ const WalletSection: React.FC<ToggleSwitchProps> = ({
               <TitleTotal>Cards | 1 out of 4</TitleTotal>
             </div>
             <div>
-              <span>back - next</span>
+              <span>
+                <ButtonClickPassLeft>
+                  <img src={Left} alt="" />
+                </ButtonClickPassLeft>
+                <ButtonClickPassRight>
+                  <img src={Right} alt="" />
+                </ButtonClickPassRight>
+              </span>
             </div>
           </GridHeaderWallet>
           <GridWallet>
-            <img src={Card} alt="" />
+            <img src={Card} alt="Card" />
 
             <SpanLine />
-
             <CardInfo>
               <div>
                 <p>Balance</p>

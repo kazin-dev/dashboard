@@ -39,6 +39,7 @@ export const CardWallet = styled.div`
     max-width: none; /* Permite crescer em telas maiores */
   }
 `
+
 export const GridWallet = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -96,7 +97,7 @@ export const Switch = styled.label`
 export const GridHeaderWallet = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 23%;
+  gap: 26%;
   margin-bottom: 10px;
   width: 1100px;
 
@@ -122,4 +123,28 @@ export const CardInfo = styled.div`
     margin-bottom: 8px;
     margin-top: 10px;
   }
+`
+export const ShadowCardInfo = styled.div`
+  width: 291px;
+  height: 170px;
+  border-radius: 12px;
+  color: ${colors.Silver};
+  margin-left: 80px;
+`
+
+export const ButtonClickPassLeft = styled.button`
+  height: 32px;
+  width: 32px;
+  border: 1px solid ${colors.Silver};
+  border-radius: 5px;
+  background-color: transparent;
+  margin-left: 30px;
+`
+export const ButtonClickPassRight = styled.button`
+  height: 32px;
+  width: 32px;
+  border: 1px solid ${colors.Silver};
+  border-radius: 5px;
+  background-color: transparent;
+  margin-left: 8px;
 `
