@@ -22,7 +22,7 @@ export const GlobalStyle = createGlobalStyle`
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
-  height: 100vh; /* Garante que a altura seja 100% da viewport */
+  height: 100%; /* Garante que a altura seja 100% da viewport */
   width: 100%;
   overflow: hidden;
 
@@ -33,10 +33,9 @@ export const Container = styled.div`
 
 export const SidebarWrapper = styled.div`
   width: 100%;
-  height: auto; /* Ajusta a altura dinamicamente */
+  height: 100%; /* Preenche a altura total da tela */
   @media (min-width: 768px) {
-    width: 25%; /* Define uma largura fixa para telas maiores */
-    height: 100%; /* Preenche a altura total da tela */
+    width: 25%;
   }
 `
 
@@ -47,7 +46,7 @@ export const MainContent = styled.main`
   background-color: ${colors.LightGray};
   max-width: 100%;
   width: 100%;
-  height: auto; /* Ajusta a altura dinamicamente */
+  height: 100%; /* Ajusta a altura dinamicamente */
   padding: 16px;
 
   @media (min-width: 1024px) {
@@ -79,9 +78,8 @@ export const GridPage = styled.div`
 export const SecondContainer = styled.div`
   display: flex;
   flex-direction: column;
-  height: auto; /* Ajusta a altura dinamicamente */
+  height: 100%; /* Preenche a altura total do MainContent */
   @media (min-width: 768px) {
     flex-direction: row;
-    height: 100%; /* Garante altura total em telas maiores */
   }
 `

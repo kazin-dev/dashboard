@@ -28,7 +28,6 @@ export const TopBar = styled.div`
 
   a {
     color: ${colors.Silver};
-    margin-right: 30px;
     font-size: 12px;
   }
 `

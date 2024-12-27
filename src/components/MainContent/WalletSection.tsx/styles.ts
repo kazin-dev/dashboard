@@ -49,6 +49,10 @@ export const GridWallet = styled.div`
   @media (min-width: 768px) {
     max-width: none; /* Permite crescer em telas maiores */
   }
+
+  img {
+    filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.75));
+  }
 `
 export const Switch = styled.label`
   position: relative;
@@ -110,11 +114,15 @@ export const GridHeaderWallet = styled.div`
 export const SpanLine = styled.span`
   width: 0.3px;
   height: 100%;
-  background-color: ${colors.Silver};
+  background-color: rgba(128, 128, 128, 0.4);
   margin: 0 26px;
 `
 export const CardInfo = styled.div`
   width: 300px;
+
+  div {
+    padding: 4px 0;
+  }
 
   p {
     font-size: 16px;

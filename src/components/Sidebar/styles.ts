@@ -2,14 +2,14 @@ import styled from 'styled-components'
 import { colors } from '../../styles'
 
 export const SidebarContainer = styled.aside`
-  width: 281px;
+  max-width: 258px;
+  width: 100%;
   background-color: ${colors.Black};
   color: #fff;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 20px 10px;
-  height: 100%;
+  padding: 20px 22px 10px 0;
 
   @media (max-width: 768px) {
     width: 70px; /* Reduz a largura do sidebar */
@@ -23,6 +23,7 @@ export const Logo = styled.div`
   padding: 0 10px 10px 10px;
   margin-bottom: 20px;
   border-bottom: 1px solid ${colors.SoftSilver};
+  width: 258px;
 
   img {
     width: 40px;
@@ -55,16 +56,19 @@ export const Menu = styled.nav`
     list-style: none;
     padding: 0;
     margin: 0;
+    display: flex;
+    flex-direction: column;
 
     .menu-item {
       display: flex;
       align-items: center;
-      padding: 20px;
+      padding: 20px 20px;
       font-size: 1rem;
       cursor: pointer;
       border-radius: 5px;
       transition: background-color 0.3s;
       height: 59px;
+      color: ${colors.Silver};
 
       span {
         margin-right: 10px;
@@ -75,11 +79,25 @@ export const Menu = styled.nav`
         height: 20px;
       }
     }
+    .menu-item.active {
+      color: #fff; /* Texto branco */
+      background-color: rgba(
+        255,
+        255,
+        255,
+        0.1
+      ); /* Fundo sutil para destaque */
+    }
   }
 
   .help-settings {
-    border-top: 1px solid ${colors.SoftSilver};
+    border-top: 1px solid rgba(128, 128, 128, 0.2);
+    width: 258px;
     padding-top: 10px;
+    margin-bottom: 310px;
+    color: ${colors.Silver};
+    font-size: 0.8rem;
+    cursor: pointer;
 
     .help,
     .settings {
@@ -92,7 +110,9 @@ export const Menu = styled.nav`
       transition: background-color 0.3s;
 
       span {
-        margin-right: 10px;
+        display: flex;
+        flex-direction: column;
+        padding: 10px 6px;
       }
 
       img {
@@ -178,8 +198,9 @@ export const UserProfile = styled.div`
 
 export const SidebarFooter = styled.div`
   margin-top: auto;
-  padding-top: 20px;
-  border-top: 1px solid ${colors.SoftSilver};
+  padding: 20px 0 25px 0;
+  border-top: 1px solid rgba(128, 128, 128, 0.2);
+  width: 258px;
 
   .user-profile {
     display: flex;

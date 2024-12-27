@@ -15,7 +15,7 @@ export const Card = styled.div`
 
 export const TopBar = styled.div`
   display: flex;
-  gap: 50%;
+  justify-content: space-between;
   align-items: center;
 
   h3 {

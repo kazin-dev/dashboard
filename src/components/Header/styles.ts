@@ -57,7 +57,7 @@ export const Profile = styled.div`
 export const Grid = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 56.4%;
+  gap: 58.8%;
   height: 80px;
 `
 export const PngVector = styled.img`
