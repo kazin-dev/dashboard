@@ -16,6 +16,11 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
     font-family: "Inter", sans-serif;
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: ${colors.LightGray};
+    }
   }
 `
 
@@ -27,7 +32,8 @@ export const Container = styled.div`
   overflow: hidden;
 
   @media (min-width: 768px) {
-    flex-direction: row; /* Sidebar ao lado para telas maiores */
+    flex-direction: row;
+    width: 100%;
   }
 `
 
@@ -35,7 +41,7 @@ export const SidebarWrapper = styled.div`
   width: 100%;
   height: 100%; /* Preenche a altura total da tela */
   @media (min-width: 768px) {
-    width: 25%;
+    width: 100%;
   }
 `
 
@@ -56,9 +62,9 @@ export const MainContent = styled.main`
   }
 
   @media (max-width: 768px) {
-    width: 100%;
-    padding: 16px;
-    max-width: 100%;
+    width: 1000px;
+    height: 100%;
+    display: block;
   }
 `
 
@@ -74,10 +80,8 @@ export const GridPage = styled.div`
   }
 
   @media (min-width: 1024px) {
-    grid-template-columns: repeat(
-      3,
-      1fr
-    ); /* Adiciona mais colunas em telas maiores */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
   }
 `
 

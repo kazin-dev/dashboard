@@ -5,6 +5,37 @@ interface MobileMenuProps {
   isOpen: boolean
 }
 
+export const SidebarContainer = styled.aside`
+  max-width: 258px;
+  width: 100%;
+  background-color: ${colors.Black};
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px 22px 10px 0;
+
+  /* Ajuste para telas menores que 768px */
+  @media (max-width: 768px) {
+    flex-direction: row;
+    width: 100%;
+    padding: 10px;
+    max-width: none; /* Remove a limitação de largura */
+  }
+
+  /* Ajuste para telas menores que 480px */
+  @media (max-width: 480px) {
+    display: block;
+    padding: 10px 5px;
+  }
+
+  /* Ajuste para telas maiores que 1200px */
+  @media (min-width: 1200px) {
+    max-width: 300px; /* Permite maior largura em telas grandes */
+    padding: 30px 25px 15px;
+  }
+`
+
 export const HamburgerButton = styled.div`
   display: none;
   cursor: pointer;
@@ -34,28 +65,12 @@ export const MobileMenu = styled.div<MobileMenuProps>`
   @media (max-width: 768px) {
     display: ${({ isOpen }) => (isOpen ? 'block' : 'none')};
     background-color: ${colors.Black};
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     z-index: 999;
-  }
-`
-
-export const SidebarContainer = styled.aside`
-  max-width: 258px;
-  width: 100%;
-  background-color: ${colors.Black};
-  color: #fff;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 20px 22px 10px 0;
-
-  @media (max-width: 768px) {
-    width: 100%;
-    padding: 10px 5px;
   }
 `
 
@@ -80,7 +95,9 @@ export const Logo = styled.div`
 
   @media (max-width: 768px) {
     justify-content: center;
-    margin-bottom: 10px;
+    width: 100vw;
+    height: 100%;
+    background-color: ${colors.Black} !important;
   }
 `
 

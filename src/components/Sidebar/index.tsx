@@ -1,4 +1,4 @@
-// Sidebar.jsx
+// Sidebar.tsx
 import React, { useState } from 'react'
 import {
   Logo,
@@ -28,7 +28,7 @@ const Sidebar = () => {
   }
 
   return (
-    <SidebarContainer className="sidebar">
+    <SidebarContainer>
       <Logo className="logo">
         <img src={Symbol} alt="InvestBank Logo" />
         <h1>InvestBank</h1>

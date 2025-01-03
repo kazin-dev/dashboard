@@ -8,6 +8,11 @@ export const ChartContainer = styled.div`
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   padding: 20px;
   margin-top: 16px;
+
+  @media (max-width: 768px) {
+    width: 303px;
+    height: 280px;
+  }
 `
 
 export const Title = styled.h2`

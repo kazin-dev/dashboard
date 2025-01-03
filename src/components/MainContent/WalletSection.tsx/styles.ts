@@ -10,58 +10,86 @@ export const CardTotal = styled.div`
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  @media (max-width: 768px) {
+    max-width: 304px;
+    margin-top: 20px;
+    display: block;
+  }
 `
+
 export const ContainerTotal = styled.div`
   display: flex;
-  width: 603px;
+  width: 100%;
+  max-width: 603px;
   margin-top: 36px;
+
+  @media (max-width: 768px) {
+    max-width: 303px;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
 `
+
 export const TitleTotal = styled.div`
   line-height: auto;
   color: ${colors.Silver};
   font-size: 12px;
-  img {
-    margin-right: 4px;
+
+  @media (max-width: 768px) {
+    font-size: 10px;
   }
 `
+
 export const Value = styled.span`
   font-size: 16px;
   margin: 4px 0;
   display: block;
+
+  @media (max-width: 768px) {
+    font-size: 14px;
+  }
 `
 
 export const CardWallet = styled.div`
-  width: 603px;
-  height: 278px;
+  width: 100%;
+  max-width: 603px;
+  height: auto;
   background-color: ${colors.White};
   margin-top: 12px;
   border-radius: 12px;
   padding: 12px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  @media (min-width: 768px) {
-    max-width: none;
+
+  img {
+    @media (max-width: 768px) {
+      max-width: 280px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 10px;
+    max-width: 303px;
   }
 `
 
 export const GridWallet = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: 8px;
-  max-width: 400px;
+  max-width: 100%;
   width: 100%;
-  @media (min-width: 768px) {
-    max-width: none; /* Permite crescer em telas maiores */
-  }
 
-  img {
-    filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.75));
+  @media (max-width: 480px) {
+    grid-template-columns: 1fr;
   }
 `
+
 export const Switch = styled.label`
   position: relative;
   display: inline-block;
   width: 50px;
-  height: 24px;
+  height: 25px;
 
   input {
     opacity: 0;
@@ -101,46 +129,52 @@ export const Switch = styled.label`
     transform: translateX(24px);
   }
 `
+
 export const GridHeaderWallet = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 26%;
+  gap: 8px;
   margin-bottom: 10px;
-  width: 1100px;
+  width: 100%;
+  max-width: 1100px;
 
   div {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
-`
-export const SpanLine = styled.span`
-  width: 0.3px;
-  height: 100%;
-  background-color: rgba(128, 128, 128, 0.4);
-  margin: 0 26px;
-`
-export const CardInfo = styled.div`
-  width: 300px;
 
-  div {
-    padding: 4px 0;
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 16px;
   }
+`
+
+export const SpanLine = styled.span`
+  width: 1px;
+  height: 100%;
+  background-color: ${colors.Silver};
+  margin: 0 16px;
+
+  @media (max-width: 768px) {
+    margin: 0 8px;
+  }
+`
+
+export const CardInfo = styled.div`
+  width: 100%;
+  max-width: 300px;
 
   p {
     font-size: 16px;
-    line-height: auto;
+    line-height: 1.4;
     color: ${colors.Silver};
-    margin-bottom: 8px;
-    margin-top: 10px;
+    margin: 10px 0;
+
+    @media (max-width: 768px) {
+      font-size: 14px;
+    }
   }
-`
-export const ShadowCardInfo = styled.div`
-  width: 291px;
-  height: 170px;
-  border-radius: 12px;
-  color: ${colors.Silver};
-  margin-left: 80px;
 `
 
 export const ButtonClickPassLeft = styled.button`
@@ -150,7 +184,12 @@ export const ButtonClickPassLeft = styled.button`
   border-radius: 5px;
   background-color: transparent;
   margin-left: 30px;
+
+  @media (max-width: 768px) {
+    margin-left: 4px;
+  }
 `
+
 export const ButtonClickPassRight = styled.button`
   height: 32px;
   width: 32px;
@@ -158,4 +197,8 @@ export const ButtonClickPassRight = styled.button`
   border-radius: 5px;
   background-color: transparent;
   margin-left: 8px;
+
+  @media (max-width: 768px) {
+    margin-left: 4px;
+  }
 `

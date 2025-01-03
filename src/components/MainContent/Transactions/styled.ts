@@ -14,6 +14,11 @@ export const CardTransactions = styled.div`
   ul {
     list-style: none;
   }
+
+  @media (max-width: 768px) {
+    width: 304px;
+    margin-left: 19px;
+  }
 `
 export const TopBar = styled.div`
   display: flex;

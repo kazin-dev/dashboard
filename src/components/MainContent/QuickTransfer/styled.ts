@@ -11,6 +11,12 @@ export const Card = styled.div`
   position: relative;
   padding: 16px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+  @media (max-width: 768px) {
+    width: 304px;
+    margin-left: 19px;
+    height: 418px;
+  }
 `
 
 export const TopBar = styled.div`
@@ -177,4 +183,5 @@ export const ButtonStarted = styled.button`
     height: 16px;
     width: auto;
     vertical-align: middle;
+  }
 `
