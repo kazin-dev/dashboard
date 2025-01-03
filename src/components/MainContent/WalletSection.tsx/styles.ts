@@ -20,6 +20,9 @@ export const TitleTotal = styled.div`
   line-height: auto;
   color: ${colors.Silver};
   font-size: 12px;
+  img {
+    margin-right: 4px;
+  }
 `
 export const Value = styled.span`
   font-size: 16px;
@@ -36,7 +39,7 @@ export const CardWallet = styled.div`
   padding: 12px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   @media (min-width: 768px) {
-    max-width: none; /* Permite crescer em telas maiores */
+    max-width: none;
   }
 `
 
@@ -58,7 +61,7 @@ export const Switch = styled.label`
   position: relative;
   display: inline-block;
   width: 50px;
-  height: 25px;
+  height: 24px;
 
   input {
     opacity: 0;

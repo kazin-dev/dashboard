@@ -54,6 +54,12 @@ export const MainContent = styled.main`
     height: 100%; /* Garante que preencha toda a altura em telas grandes */
     padding: 32px;
   }
+
+  @media (max-width: 768px) {
+    width: 100%;
+    padding: 16px;
+    max-width: 100%;
+  }
 `
 
 export const GridPage = styled.div`

@@ -1,6 +1,48 @@
 import styled from 'styled-components'
 import { colors } from '../../styles'
 
+interface MobileMenuProps {
+  isOpen: boolean
+}
+
+export const HamburgerButton = styled.div`
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 24px;
+  width: 30px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+
+  span {
+    background-color: ${colors.Silver};
+    height: 3px;
+    width: 100%;
+    border-radius: 2px;
+    transition: all 0.3s;
+  }
+
+  @media (max-width: 768px) {
+    display: flex;
+  }
+`
+
+export const MobileMenu = styled.div<MobileMenuProps>`
+  @media (max-width: 768px) {
+    display: ${({ isOpen }) => (isOpen ? 'block' : 'none')};
+    background-color: ${colors.Black};
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 999;
+  }
+`
+
 export const SidebarContainer = styled.aside`
   max-width: 258px;
   width: 100%;
@@ -12,7 +54,7 @@ export const SidebarContainer = styled.aside`
   padding: 20px 22px 10px 0;
 
   @media (max-width: 768px) {
-    width: 70px; /* Reduz a largura do sidebar */
+    width: 100%;
     padding: 10px 5px;
   }
 `
@@ -39,10 +81,6 @@ export const Logo = styled.div`
   @media (max-width: 768px) {
     justify-content: center;
     margin-bottom: 10px;
-
-    h1 {
-      display: none; /* Esconde o texto do logo */
-    }
   }
 `
 
@@ -228,25 +266,7 @@ export const SidebarFooter = styled.div`
   }
 
   @media (max-width: 768px) {
-    .user-profile {
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-
-      img {
-        margin-right: 0;
-        margin-bottom: 10px;
-      }
-
-      .user-info {
-        h4 {
-          font-size: 0.9rem;
-        }
-
-        p {
-          font-size: 0.7rem;
-        }
-      }
+    display: none;
     }
   }
 `

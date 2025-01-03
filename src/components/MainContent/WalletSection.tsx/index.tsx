@@ -19,6 +19,8 @@ import Card from '../../../Images/Card.png'
 import StatisticsChart from '../Statistcs'
 import Left from '../../../Images/Left.png'
 import Right from '../../../Images/Right.png'
+import ArrowUp from '../../../Images/Arrow 1.png'
+import ArrowDown from '../../../Images/Arrow 1 (1).png'
 
 type ToggleSwitchProps = {
   isChecked: boolean
@@ -40,7 +42,7 @@ const WalletSection: React.FC<ToggleSwitchProps> = ({
             </Value>
             <span>
               <TitleTotal>
-                from last week <span>7.85%</span>
+                from last week <span style={{ color: '#3DD26A' }}><img src={ArrowUp} />7.85%</span>
               </TitleTotal>
             </span>
           </CardTotal>
@@ -51,7 +53,7 @@ const WalletSection: React.FC<ToggleSwitchProps> = ({
             </Value>
             <span>
               <TitleTotal>
-                from last week <span>7.85%</span>
+                from last week <span style={{ color: '#3DD26A' }}><img src={ArrowUp} />22.30%</span>
               </TitleTotal>
             </span>
           </CardTotal>
@@ -62,7 +64,7 @@ const WalletSection: React.FC<ToggleSwitchProps> = ({
             </Value>
             <span>
               <TitleTotal>
-                from last week <span>7.85%</span>
+                from last week <span style={{ color: '#3DD26A' }}><img src={ArrowUp} />9.50%</span>
               </TitleTotal>
             </span>
           </CardTotal>

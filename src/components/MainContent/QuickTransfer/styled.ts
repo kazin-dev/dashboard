@@ -35,7 +35,7 @@ export const Cards = styled.div`
   margin: 16px 0;
 
   &::-webkit-scrollbar {
-    display: none; /* Oculta a barra de rolagem */
+    display: none;
   }
 `
 
@@ -52,6 +52,10 @@ export const CardItem = styled.div`
   font-size: 14px;
   font-weight: bold;
   color: ${colors};
+
+  img:first-child {
+    position: relative;
+  }
 
   div {
     display: flex;
@@ -73,6 +77,14 @@ export const CardItem = styled.div`
       margin-left: 8px;
     }
   }
+`
+export const FavoriteCard = styled.img`
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
 `
 
 export const ArrowButton = styled.button`

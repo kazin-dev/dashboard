@@ -9,9 +9,21 @@ import {
   Profile,
   RightContent,
   SecondContainer,
-  StyledInput
+  StyledInput,
+  NotificationsActive
 } from './styles'
 
+/*************  ✨ Codeium Command ⭐  *************/
+/**
+ * Header component that displays a search input, notification icon, and user profile section.
+ *
+ * The component is structured with a grid layout inside a SecondContainer.
+ * - Includes a search input field with an accompanying search icon.
+ * - Displays a notification icon with an active status indicator.
+ * - Shows a user profile section with profile image and a vector overlay.
+ */
+
+/******  7904e4c8-b1fb-499b-8461-dfbb26abe236  *******/
 const Header = () => {
   return (
     <SecondContainer>
@@ -22,8 +34,10 @@ const Header = () => {
         </StyledInput>
         <RightContent>
           <NotificationIcon>
-            <img src={Notification} alt="" />
+            <img src={Notification} alt="Ícone de Notificação" />
+            <NotificationsActive />
           </NotificationIcon>
+
           <Profile>
             <img src={EclipseProfile} alt="" />
             <PngVector src={Vector} alt="" />

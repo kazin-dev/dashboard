@@ -4,6 +4,7 @@ import Porcent from '../../../Images/porc.png'
 import Arrow from '../../../Images/solar_arrow-right-linear.png'
 import CardOne from '../../../Images/card (1).png'
 import CardTwo from '../../../Images/card2.png'
+import Favorite from '../../../Images/Group 2.png'
 
 import {
   BodyCard,
@@ -16,7 +17,8 @@ import {
   Input,
   CardArea,
   StartArea,
-  ButtonStarted
+  ButtonStarted,
+  FavoriteCard
 } from './styled'
 import React, { useRef } from 'react'
 
@@ -41,7 +43,6 @@ const QuickTransfer = () => {
         <a href="#">See all</a>
       </TopBar>
       <BodyCard>
-        {/* Botões de Seta */}
         <ArrowButton className="left" onClick={() => scroll('left')}>
           {'<'}
         </ArrowButton>
@@ -49,10 +50,16 @@ const QuickTransfer = () => {
           {'>'}
         </ArrowButton>
 
-        {/* Container Rolável */}
         <Cards ref={scrollRef}>
           <CardItem>
-            <img src={CardOne} alt="" />
+            <div style={{ position: 'relative' }}>
+              <img
+                src={CardOne}
+                alt="Card Image"
+                style={{ width: '100%', height: '100%', borderRadius: '8px' }}
+              />
+              <FavoriteCard src={Favorite} alt="Favorite Icon" />
+            </div>
             <div>
               <p>3149 Debit card</p>
               <p>2895.15 USD</p>
