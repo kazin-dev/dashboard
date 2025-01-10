@@ -13,9 +13,9 @@ export const Card = styled.div`
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
   @media (max-width: 768px) {
-    width: 304px;
-    margin-left: 19px;
-    height: 418px;
+    max-width: 100%; /* Permite que o card ocupe toda a largura em telas menores */
+    margin-left: 0;
+    margin-right: 0;
   }
 `
 

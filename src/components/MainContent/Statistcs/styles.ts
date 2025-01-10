@@ -1,8 +1,8 @@
 import { styled } from 'styled-components'
-
 export const ChartContainer = styled.div`
-  width: 603px;
-  height: 341px;
+  width: 100%; /* Faz o container ocupar toda a largura disponível */
+  max-width: 603px; /* Define uma largura máxima para telas grandes */
+  height: auto; /* Ajusta a altura conforme necessário */
   background-color: #fff;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -10,8 +10,7 @@ export const ChartContainer = styled.div`
   margin-top: 16px;
 
   @media (max-width: 768px) {
-    width: 303px;
-    height: 280px;
+    height: 280px; /* Define uma altura fixa em telas menores */
   }
 `
 

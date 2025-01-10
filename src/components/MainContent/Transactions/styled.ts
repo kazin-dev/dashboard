@@ -2,11 +2,11 @@ import styled from 'styled-components'
 import { colors } from '../../../styles'
 
 export const CardTransactions = styled.div`
-  width: 415px;
-  height: 326px;
+  width: 100%; /* Faz o card ocupar toda a largura disponível */
+  max-width: 610px; /* Limita a largura máxima */
+  height: auto; /* Ajusta dinamicamente conforme o conteúdo */
   background-color: ${colors.White};
   margin-top: 36px;
-  list-style: none;
   padding: 16px;
   border-radius: 12px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -15,11 +15,20 @@ export const CardTransactions = styled.div`
     list-style: none;
   }
 
-  @media (max-width: 768px) {
-    width: 304px;
-    margin-left: 19px;
+  @media (min-width: 768px) and (max-width: 1024px) {
+    max-width: 400px; /* Permite que o card ocupe toda a largura em telas menores */
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  /* Estilos para telas menores que 768px */
+  @media (max-width: 767px) {
+    max-width: 100%; /* Permite que o card ocupe toda a largura em telas menores */
+    margin-left: 0;
+    margin-right: 0;
   }
 `
+
 export const TopBar = styled.div`
   display: flex;
   justify-content: space-between;

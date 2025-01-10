@@ -62,25 +62,36 @@ export const CardWallet = styled.div`
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
   img {
-    @media (max-width: 768px) {
+    @media (max-width: 767px) {
       max-width: 280px;
     }
   }
 
-  @media (max-width: 768px) {
+  /* Estilos para telas entre 768px e 1024px */
+  @media (min-width: 768px) and (max-width: 1024px) {
     padding: 10px;
-    max-width: 303px;
+    max-width: auto;
+  }
+
+  /* Estilos para telas menores que 768px */
+  @media (max-width: 767px) {
+    padding: 12px;
+    max-width: 84%;
+    height: auto;
+    height: 500px;
   }
 `
 
 export const GridWallet = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 8px;
-  max-width: 100%;
-  width: 100%;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 12px;
 
-  @media (max-width: 480px) {
+  @media (min-width: 768px) and (max-width: 1024px) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  @media (max-width: 767px) {
     grid-template-columns: 1fr;
   }
 `
@@ -164,6 +175,7 @@ export const SpanLine = styled.span`
 export const CardInfo = styled.div`
   width: 100%;
   max-width: 300px;
+  margin-right: 90px;
 
   p {
     font-size: 16px;
@@ -197,8 +209,4 @@ export const ButtonClickPassRight = styled.button`
   border-radius: 5px;
   background-color: transparent;
   margin-left: 8px;
-
-  @media (max-width: 768px) {
-    margin-left: 4px;
-  }
 `
