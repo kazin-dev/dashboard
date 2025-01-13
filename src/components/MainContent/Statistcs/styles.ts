@@ -10,7 +10,8 @@ export const ChartContainer = styled.div`
   margin-top: 16px;
 
   @media (max-width: 768px) {
-    height: 280px; /* Define uma altura fixa em telas menores */
+    max-width: 86%;
+    padding: 16px;
   }
 `
 

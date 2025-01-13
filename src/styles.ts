@@ -114,5 +114,6 @@ export const SecondContainer = styled.div`
   /* Estilos para telas menores que 768px */
   @media (max-width: 767px) {
     flex-direction: row;
+    margin: 0 auto;
   }
 `

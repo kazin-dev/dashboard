@@ -194,6 +194,7 @@ export const Menu = styled.nav`
 
     .help-settings .help,
     .help-settings .settings {
+      margin-left: 150px;
       justify-content: center;
       padding: 10px;
 

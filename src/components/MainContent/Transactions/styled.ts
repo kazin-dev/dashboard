@@ -15,17 +15,15 @@ export const CardTransactions = styled.div`
     list-style: none;
   }
 
+  /* Estilos para tablets */
   @media (min-width: 768px) and (max-width: 1024px) {
-    max-width: 400px; /* Permite que o card ocupe toda a largura em telas menores */
-    margin-left: 0;
-    margin-right: 0;
+    max-width: 400px; /* Ajusta a largura para tablets */
+    margin: 0 auto; /* Centraliza o card */
   }
 
   /* Estilos para telas menores que 768px */
-  @media (max-width: 767px) {
-    max-width: 100%; /* Permite que o card ocupe toda a largura em telas menores */
-    margin-left: 0;
-    margin-right: 0;
+  @media (max-width: 768px) {
+    max-width: 82%; /* Permite que o card ocupe quase toda a largura */
   }
 `
 

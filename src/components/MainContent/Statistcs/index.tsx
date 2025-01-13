@@ -29,7 +29,7 @@ const StatisticsChart: React.FC = () => {
   return (
     <ChartContainer>
       <Title>Statistics</Title>
-      <ResponsiveContainer width="100%" height="85%">
+      <ResponsiveContainer width="100%" height={279.2}>
         <LineChart
           data={data}
           margin={{ top: 10, right: 30, left: 0, bottom: 0 }}

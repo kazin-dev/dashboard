@@ -12,10 +12,17 @@ export const Card = styled.div`
   padding: 16px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
-  @media (max-width: 768px) {
-    max-width: 100%; /* Permite que o card ocupe toda a largura em telas menores */
+  @media (min-width: 768px) and (max-width: 1288px) {
+    max-width: auto;
+    width: 608px; /* Permite que o card ocupe toda a largura em telas menores */
     margin-left: 0;
     margin-right: 0;
+  }
+
+  /* Estilos para telas menores que 768px */
+  @media (max-width: 767px) {
+    max-width: 80%;
+    height: 430px;
   }
 `
 
