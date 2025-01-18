@@ -22,6 +22,11 @@ export const Grid = styled.div`
     color: ${colors.Silver};
   }
 
+  @media (min-width: 768px) and (max-width: 1324px) {
+    padding: 26px;
+    max-width: auto;
+  }
+
   @media (max-width: 768px) {
     flex-direction: column; /* Itens empilhados verticalmente */
     margin-right: 0; /* Remove a margem lateral em telas pequenas */

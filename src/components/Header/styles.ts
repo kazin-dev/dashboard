@@ -16,7 +16,7 @@ export const SecondContainer = styled.div`
   margin: 0 auto;
 
   @media (min-width: ${breakpoints.tablet} and max-width: ${breakpoints.laptop}) {
-    width: 50%;
+    width: 100%;
   }
 
   @media (max-width: ${breakpoints.tablet}) {

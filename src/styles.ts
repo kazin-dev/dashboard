@@ -62,7 +62,7 @@ export const MainContent = styled.main`
   }
 
   @media (max-width: 768px) {
-    width: 1000px;
+    width: 900px;
     height: 100%;
     display: block;
   }

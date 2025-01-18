@@ -13,6 +13,17 @@ export const ModelTransactions = styled.div`
   border-bottom: 2px solid ${colors.LightGray};
   margin: 12px 0;
   padding-bottom: 10px;
+
+  @media (min-width: 768px) and (max-width: 1024px) {
+    max-width: 610px; /* Ajusta a largura para tablets */
+    margin: 0 auto; /* Centraliza o card */
+  }
+
+  /* Estilos para telas menores que 768px */
+  @media (max-width: 767px) {
+    max-width: 310px;
+    width: 100%; /* Permite que o card ocupe quase toda a largura */
+  }
 `
 
 export const BodyModelTransactions = styled.div`

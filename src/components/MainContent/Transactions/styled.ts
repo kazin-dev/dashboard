@@ -17,13 +17,14 @@ export const CardTransactions = styled.div`
 
   /* Estilos para tablets */
   @media (min-width: 768px) and (max-width: 1024px) {
-    max-width: 400px; /* Ajusta a largura para tablets */
+    max-width: 610px; /* Ajusta a largura para tablets */
     margin: 0 auto; /* Centraliza o card */
   }
 
   /* Estilos para telas menores que 768px */
   @media (max-width: 768px) {
-    max-width: 82%; /* Permite que o card ocupe quase toda a largura */
+    max-width: 360px;
+    width: 100%; /* Permite que o card ocupe quase toda a largura */
   }
 `
 
