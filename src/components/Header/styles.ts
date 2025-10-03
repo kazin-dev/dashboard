@@ -18,10 +18,6 @@ export const SecondContainer = styled.div`
   @media (min-width: ${breakpoints.tablet} and max-width: ${breakpoints.laptop}) {
     width: 100%;
   }
-
-  @media (max-width: ${breakpoints.tablet}) {
-    padding: 20px;
-  }
 `
 
 export const StyledInput = styled.div`
@@ -60,6 +56,10 @@ export const StyledInput = styled.div`
 export const RightContent = styled.div`
   display: flex;
   align-items: center;
+  @media (max-width: 768px) {
+    margin: 20px 0;
+    margin-left: 18px;
+  }
 `
 
 export const NotificationIcon = styled.span`

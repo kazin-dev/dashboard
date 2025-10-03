@@ -45,7 +45,7 @@ const ItemTransactions = (): JSX.Element => {
               <Name>{transaction.name}</Name>
               <Date>{transaction.date}</Date>
             </div>
-            <Value isPositive={transaction.value.startsWith('+')}>
+            <Value $isPositive={transaction.value.startsWith('+')}>
               {transaction.value}
             </Value>
           </BodyModelTransactions>

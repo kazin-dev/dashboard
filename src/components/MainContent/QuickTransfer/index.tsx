@@ -27,7 +27,7 @@ const QuickTransfer = () => {
 
   const scroll = (direction: 'left' | 'right') => {
     if (scrollRef.current) {
-      const scrollAmount = 250 // Distância da rolagem
+      const scrollAmount = 25
       if (direction === 'left') {
         scrollRef.current.scrollLeft -= scrollAmount
       } else {

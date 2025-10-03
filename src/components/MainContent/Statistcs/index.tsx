@@ -1,5 +1,4 @@
 import React from 'react'
-
 import {
   LineChart,
   Line,
@@ -9,11 +8,8 @@ import {
   CartesianGrid,
   ResponsiveContainer
 } from 'recharts'
-import { ChartContainer, Title } from './styles'
+import { ChartContainer, ChartBox, Title } from './styles'
 
-// Styled Components
-
-// Dados de exemplo
 const data = [
   { date: '8/04', value: 10000 },
   { date: '9/04', value: 20000 },
@@ -24,30 +20,44 @@ const data = [
   { date: '14/04', value: 22000 }
 ]
 
-// Componente principal
+const k = (v: number) => `${Math.round(v / 1000)}k` // 38000 -> 38k
+
 const StatisticsChart: React.FC = () => {
   return (
     <ChartContainer>
-      <Title>Statistics</Title>
-      <ResponsiveContainer width="100%" height={279.2}>
-        <LineChart
-          data={data}
-          margin={{ top: 10, right: 30, left: 0, bottom: 0 }}
-        >
-          <CartesianGrid strokeDasharray="3 3" />
-          <XAxis dataKey="date" />
-          <YAxis />
-          <Tooltip />
-          <Line
-            type="monotone"
-            dataKey="value"
-            stroke="#6f42c1"
-            strokeWidth={2}
-            dot={{ r: 6 }}
-            activeDot={{ r: 8 }}
-          />
-        </LineChart>
-      </ResponsiveContainer>
+      <Title>Estatísticas</Title>
+      <ChartBox>
+        <ResponsiveContainer width="100%" height="100%">
+          <LineChart
+            data={data}
+            margin={{ top: 8, right: 12, left: 0, bottom: 0 }}
+          >
+            <CartesianGrid strokeDasharray="3 3" />
+            <XAxis
+              dataKey="date"
+              interval="preserveStartEnd"
+              tick={{ fontSize: 12 }}
+            />
+            <YAxis
+              tick={{ fontSize: 12 }}
+              tickFormatter={k}
+              width={30} // deixa mais compacto
+              domain={[0, 'auto']}
+            />
+            <Tooltip
+              formatter={(v: number) => `${v.toLocaleString('pt-BR')}`}
+            />
+            <Line
+              type="monotone"
+              dataKey="value"
+              stroke="#6f42c1"
+              strokeWidth={2}
+              dot={{ r: 4 }} // pontos menores no mobile
+              activeDot={{ r: 6 }}
+            />
+          </LineChart>
+        </ResponsiveContainer>
+      </ChartBox>
     </ChartContainer>
   )
 }

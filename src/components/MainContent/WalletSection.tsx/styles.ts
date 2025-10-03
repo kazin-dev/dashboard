@@ -11,7 +11,7 @@ export const CardTotal = styled.div`
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   @media (max-width: 768px) {
-    max-width: 304px;
+    max-width: 360px;
     margin-top: 20px;
     display: block;
   }
@@ -24,7 +24,7 @@ export const ContainerTotal = styled.div`
   margin-top: 36px;
 
   @media (max-width: 768px) {
-    max-width: 303px;
+    width: 86%;
     flex-direction: column;
     align-items: center;
     margin-top: 20px;
@@ -76,7 +76,7 @@ export const CardWallet = styled.div`
   /* Estilos para telas menores que 768px */
   @media (max-width: 767px) {
     padding: 12px;
-    max-width: 84%;
+    max-width: 86%;
     height: auto;
     height: 500px;
   }

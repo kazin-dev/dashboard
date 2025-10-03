@@ -20,7 +20,7 @@ import StatisticsChart from '../Statistcs'
 import Left from '../../../Images/Left.png'
 import Right from '../../../Images/Right.png'
 import ArrowUp from '../../../Images/Arrow 1.png'
-import ArrowDown from '../../../Images/Arrow 1 (1).png'
+
 
 type ToggleSwitchProps = {
   isChecked: boolean

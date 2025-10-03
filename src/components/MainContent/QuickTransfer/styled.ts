@@ -3,7 +3,7 @@ import { colors } from '../../../styles'
 
 export const Card = styled.div`
   width: 415px;
-  height: 401px;
+  height: auto;
   background-color: ${colors.White};
   margin-top: 14px;
   list-style: none;
@@ -14,14 +14,13 @@ export const Card = styled.div`
 
   @media (min-width: 768px) and (max-width: 1288px) {
     max-width: auto;
-    width: 608px; /* Permite que o card ocupe toda a largura em telas menores */
+    width: 608px;
     margin-left: 0;
     margin-right: 0;
   }
 
-  /* Estilos para telas menores que 768px */
   @media (max-width: 767px) {
-    max-width: 80%;
+    max-width: 87%;
     height: 430px;
   }
 `
@@ -62,7 +61,7 @@ export const CardItem = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 14px;
+  font-size: 10px;
   font-weight: bold;
   color: ${colors};
 
@@ -77,7 +76,7 @@ export const CardItem = styled.div`
 
     p:first-child {
       color: ${colors.Silver};
-      font-size: 14px;
+      font-size: 10px;
       line-height: auto;
       font-weight: 400;
       margin: 0 0 10px 8px;
@@ -85,7 +84,7 @@ export const CardItem = styled.div`
 
     p {
       color: ${colors.Black};
-      font-size: 14px;
+      font-size: 10px;
       line-height: auto;
       margin-left: 8px;
     }
@@ -104,8 +103,8 @@ export const ArrowButton = styled.button`
   position: absolute;
   top: 23.4%;
   transform: translateY(-50%);
-  border: none; /* Remove a borda */
-  background: transparent; /* Fundo transparente */
+  border: none;
+  background: transparent;
 
   display: flex;
   align-items: center;
@@ -113,10 +112,10 @@ export const ArrowButton = styled.button`
   cursor: pointer;
   color: ${colors.Silver};
 
-  font-size: 12px; /* Ajusta o tamanho da seta */
+  font-size: 12px;
 
   &.left {
-    left: 8px; /* Ajusta a posição */
+    left: 8px;
   }
 
   &.right {

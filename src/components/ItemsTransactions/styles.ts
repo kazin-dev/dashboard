@@ -1,28 +1,23 @@
 import styled from 'styled-components'
 import { colors } from '../../styles'
 
-interface ValueProps {
-  isPositive: boolean
-}
-
 export const ModelTransactions = styled.div`
   display: flex;
   align-items: center;
-  gap: 16px; /* Adiciona espaço entre imagem e conteúdo */
-  width: 100%; /* Para ocupar o espaço disponível */
+  gap: 16px;
+  width: 100%;
   border-bottom: 2px solid ${colors.LightGray};
   margin: 12px 0;
   padding-bottom: 10px;
 
   @media (min-width: 768px) and (max-width: 1024px) {
-    max-width: 610px; /* Ajusta a largura para tablets */
-    margin: 0 auto; /* Centraliza o card */
+    max-width: 610px;
+    margin: 0 auto;
   }
 
-  /* Estilos para telas menores que 768px */
   @media (max-width: 767px) {
     max-width: 310px;
-    width: 100%; /* Permite que o card ocupe quase toda a largura */
+    width: 100%;
   }
 `
 
@@ -30,19 +25,19 @@ export const BodyModelTransactions = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%; /* Garante que o conteúdo interno ocupa o espaço disponível */
+  width: 100%;
 
   div {
     display: flex;
     flex-direction: column;
-    gap: 4px; /* Espaçamento vertical */
+    gap: 4px;
   }
 `
 
 export const Name = styled.p`
   font-size: 14px;
-  font-weight: 500; /* Medium */
-  line-height: 1.2; /* Melhor controle de altura das linhas */
+  font-weight: 500;
+  line-height: 1.2;
   margin: 0;
 `
 
@@ -53,12 +48,14 @@ export const Date = styled.p`
   margin: 0;
 `
 
+type ValueProps = { $isPositive: boolean }
+
 export const Value = styled.p<ValueProps>`
   font-size: 14px;
   font-weight: 500;
   line-height: 1.2;
-  color: ${({ isPositive }) => (isPositive ? colors.Green : colors.Red)};
   margin-left: auto;
+  color: ${({ $isPositive }) => ($isPositive ? '#16a34a' : '#dc2626')};
 `
 
 export const TransactionImage = styled.img`

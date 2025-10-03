@@ -29,8 +29,8 @@ export const Grid = styled.div`
 
   @media (max-width: 768px) {
     flex-direction: column; /* Itens empilhados verticalmente */
-    margin-right: 0; /* Remove a margem lateral em telas pequenas */
-    margin-top: 10px;
+    margin-top: 60px;
+    margin-left: 18px;
     align-items: flex-start; /* Alinha itens ao início */
     gap: 16px; /* Adiciona espaço entre os itens */
   }

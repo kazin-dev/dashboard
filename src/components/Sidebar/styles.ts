@@ -126,12 +126,13 @@ export const Menu = styled.nav`
       color: ${colors.Silver};
 
       span {
-        margin-right: 10px;
+        margin-right: 20px;
       }
 
       img {
         width: 20px;
         height: 20px;
+        margin-right: 10px;
       }
     }
     .menu-item.active {
@@ -146,7 +147,6 @@ export const Menu = styled.nav`
   }
 
   .help-settings {
-    border-top: 1px solid rgba(128, 128, 128, 0.2);
     width: 258px;
     padding-top: 10px;
     margin-bottom: 310px;
@@ -173,6 +173,7 @@ export const Menu = styled.nav`
       img {
         width: 20px;
         height: 20px;
+        margin-right: 6px;
       }
     }
   }
@@ -188,7 +189,7 @@ export const Menu = styled.nav`
       }
 
       img {
-        margin: 0;
+        margin: 8px;
       }
     }
 
@@ -284,7 +285,8 @@ export const SidebarFooter = styled.div`
   }
 
   @media (max-width: 768px) {
-    display: none;
+      display: none;
+      width: 258px;
     }
   }
 `
