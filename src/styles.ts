@@ -35,6 +35,11 @@ export const Container = styled.div`
     flex-direction: row;
     width: 100%;
   }
+
+  @media (max-width: 768px) {
+    height: 100%;
+    display: block;
+  }
 `
 
 export const SidebarWrapper = styled.div`
