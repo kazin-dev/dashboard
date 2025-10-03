@@ -14,6 +14,7 @@ export const SidebarContainer = styled.aside`
   flex-direction: column;
   justify-content: space-between;
   padding: 20px 22px 10px 0;
+  height: 100%;
 
   /* Ajuste para telas menores que 768px */
   @media (max-width: 768px) {

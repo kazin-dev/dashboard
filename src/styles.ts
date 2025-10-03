@@ -27,7 +27,7 @@ export const GlobalStyle = createGlobalStyle`
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
-  height: 100%; /* Garante que a altura seja 100% da viewport */
+  height: 100vh; /* Garante que a altura seja 100% da viewport */
   width: 100%;
   overflow: hidden;
 
